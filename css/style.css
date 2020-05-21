@@ -100,3 +100,17 @@
     width: 200px;
     height: 50px;
 }
+
+.top-middle{
+    display: flex;
+    justify-content: space-between;
+}
+
+.bottom-middle{
+    display: flex;
+    justify-content: space-around;
+}
+
+.top-hidden-middle{
+    display: flex;
+}
