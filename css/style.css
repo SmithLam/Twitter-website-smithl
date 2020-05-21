@@ -1,116 +1,203 @@
+/* LEFT COLUMN CSS */
+.icon{
+    margin-top: 5px;
+    margin-right: 25px;
+    padding-left: 10px;
+
+}
+
+.left{
+    font-weight: bold;
+    font-size: 14pt;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+
+}
+
+.left-logo{
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
 .left-home{
     display: flex;
+    padding-top: 6px;
+    color: rgb(29,161,242);
+    height: 40px;
+    margin-bottom: 9px;
 }
 .left-home:hover{
-    background-color: rgb(192, 222, 237) ;
-    color: rgb(0, 172, 237);
-    width: 100px;
-    border-radius: 20px;
+    background-color: rgb(225,232,237);
+    color: rgb(29,161,242);
+    width: 120px;
+    border-radius: 30px;
 }
 
 .left-explore{
     display: flex;
+    padding-top: 6px;
+    height: 40px;
+    margin-bottom: 9px;
 }
 .left-explore:hover{
-    background-color: rgb(192, 222, 237) ;
-    color: rgb(0, 172, 237);
-    width: 120px;
-    border-radius: 20px;
+    background-color: rgb(225,232,237);
+    color: rgb(29,161,242);
+    width: 130px;
+    border-radius: 30px;
 }
 .left-notifications{
     display: flex;
+    padding-top: 6px;
+    height: 40px;
+    margin-bottom: 9px;
 }
 .left-notifications:hover{
-    background-color: rgb(192, 222, 237) ;
-    color: rgb(0, 172, 237);
-    width: 150px;
-    border-radius: 20px;
+    background-color: rgb(225,232,237);    
+    color: rgb(29,161,242);
+    width: 180px;
+    border-radius: 30px;
 }
 
 .left-message{
     display: flex;
+    padding-top: 6px;
+    height: 40px;
+    margin-bottom: 9px;
 }
 .left-message:hover{
-    background-color: rgb(192, 222, 237) ;
-    color: rgb(0, 172, 237);
-    width: 130px;
-    border-radius: 20px;
+    background-color: rgb(225,232,237);
+    color: rgb(29,161,242);
+    width: 150px;
+    border-radius: 30px;
 }
 
 .left-bookmark{
     display: flex;
+    padding-top: 6px;
+    height: 40px;
+    margin-bottom: 9px;
 }
 .left-bookmark:hover{
-    background-color: rgb(192, 222, 237) ;
-    color: rgb(0, 172, 237);
-    width: 140px;
-    border-radius: 20px;
+    background-color: rgb(225,232,237);
+    color: rgb(29,161,242);
+    width: 160px;
+    border-radius: 30px;
 }
 
 .left-list{
     display: flex;
+    padding-top: 6px;
+    height: 40px;
+    margin-bottom: 9px;
 }
 .left-list:hover{
-    background-color: rgb(192, 222, 237) ;
-    color: rgb(0, 172, 237);
-    width: 100px;
-    border-radius: 20px;
+    background-color: rgb(225,232,237);
+    color: rgb(29,161,242);
+    width: 110px;
+    border-radius: 30px;
 }
 
 .left-profile{
     display: flex;
+    padding-top: 6px;
+    height: 40px;
+    margin-bottom: 9px;
 }
 .left-profile:hover{
-    background-color: rgb(192, 222, 237) ;
-    color: rgb(0, 172, 237);
-    width: 120px;
-    border-radius: 20px;
+    background-color: rgb(225,232,237);
+    color: rgb(29,161,242);
+    width: 130px;
+    border-radius: 30px;
 }
 
 .left-more{
     display: flex;
+    padding-top: 6px;
+    height: 40px;
+    margin-bottom: 9px;
 }
 .left-more:hover{
-    background-color: rgb(192, 222, 237) ;
-    color: rgb(0, 172, 237);
-    width: 100px;
-    border-radius: 20px;
-}
-
-.icon{
-    margin-top: 5px;
-    margin-right: 10px;
-}
-
-.left{
-    margin-bottom: 20px;
-    margin-left: 20px;
-    font-weight: bold;
-    font-family: Arial, sans-serif;
-    padding-top: 5px;
-    padding-left: 15px;
-    padding-right: 10px;
+    background-color: rgb(225,232,237);
+    color: rgb(29,161,242);
+    width: 110px;
+    border-radius: 30px;
 }
 
 .left-button-tweet{
-    background-color: rgb(67, 155, 190);
+    background-color: rgb(29,161,242);
     color: white;
     border: none;
-    border-radius: 20px;
+    border-radius: 40px;
     width: 200px;
     height: 50px;
+    font-weight: bold;
+    margin-top: 10px;
 }
 
-.top-middle{
+.left-bottom{
+    margin-top: 140px;
+}
+/* LEFT COLUMN CSS - DONEEEEEEEE */
+
+/* MIDDLE COLUMN */
+
+.middle-box-1{
     display: flex;
     justify-content: space-between;
+    border: 1px solid rgb(225,232,237);
 }
 
-.bottom-middle{
+.middle-home-button{
+    width: 100%; 
+    text-align: left;
+    height: 50px;
+    font-size: 14pt;
+    font-weight: bold;
+    background-color: white;
+    border: none;
+}
+
+.middle-box-2{
+    border-right: 1px solid rgb(225,232,237); 
+    border-left: 1px solid rgb(225,232,237); 
+    border-bottom: 10px solid rgb(225,232,237); 
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.box1{
+    display: flex;
+}
+
+.middle-box-2-icon{
+    margin-left: 25px;
+}
+
+.box2{
     display: flex;
     justify-content: space-around;
+    align-items: center;
+    padding-bottom: 10px;
 }
 
-.top-hidden-middle{
+.box2 .right{
     display: flex;
+    align-items: center;
 }
+
+.hidden-middle{
+    border-bottom: 10px solid rgb(225,232,237); 
+    border-left: 1px solid rgb(225,232,237); 
+    border-right: 1px solid rgb(225,232,237); 
+}
+
+.hidden-middle .box1{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+/* MIDDLE COLUMN - DONEEEEEEEE */
+
+
+
+
+/* RIGHT COLUMN */
+
+/* RIGHT COLUMN - DONEEEEEEEE*/
