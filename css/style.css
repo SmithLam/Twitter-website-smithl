@@ -1,0 +1,102 @@
+.left-home{
+    display: flex;
+}
+.left-home:hover{
+    background-color: rgb(192, 222, 237) ;
+    color: rgb(0, 172, 237);
+    width: 100px;
+    border-radius: 20px;
+}
+
+.left-explore{
+    display: flex;
+}
+.left-explore:hover{
+    background-color: rgb(192, 222, 237) ;
+    color: rgb(0, 172, 237);
+    width: 120px;
+    border-radius: 20px;
+}
+.left-notifications{
+    display: flex;
+}
+.left-notifications:hover{
+    background-color: rgb(192, 222, 237) ;
+    color: rgb(0, 172, 237);
+    width: 150px;
+    border-radius: 20px;
+}
+
+.left-message{
+    display: flex;
+}
+.left-message:hover{
+    background-color: rgb(192, 222, 237) ;
+    color: rgb(0, 172, 237);
+    width: 130px;
+    border-radius: 20px;
+}
+
+.left-bookmark{
+    display: flex;
+}
+.left-bookmark:hover{
+    background-color: rgb(192, 222, 237) ;
+    color: rgb(0, 172, 237);
+    width: 140px;
+    border-radius: 20px;
+}
+
+.left-list{
+    display: flex;
+}
+.left-list:hover{
+    background-color: rgb(192, 222, 237) ;
+    color: rgb(0, 172, 237);
+    width: 100px;
+    border-radius: 20px;
+}
+
+.left-profile{
+    display: flex;
+}
+.left-profile:hover{
+    background-color: rgb(192, 222, 237) ;
+    color: rgb(0, 172, 237);
+    width: 120px;
+    border-radius: 20px;
+}
+
+.left-more{
+    display: flex;
+}
+.left-more:hover{
+    background-color: rgb(192, 222, 237) ;
+    color: rgb(0, 172, 237);
+    width: 100px;
+    border-radius: 20px;
+}
+
+.icon{
+    margin-top: 5px;
+    margin-right: 10px;
+}
+
+.left{
+    margin-bottom: 20px;
+    margin-left: 20px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    padding-top: 5px;
+    padding-left: 15px;
+    padding-right: 10px;
+}
+
+.left-button-tweet{
+    background-color: rgb(67, 155, 190);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    width: 200px;
+    height: 50px;
+}
