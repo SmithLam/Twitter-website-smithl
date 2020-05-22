@@ -1,6 +1,6 @@
 let tweetInput = {
-contents: document.getElementById('tweet-input'),
-isLike: false,
+    contents: document.getElementById('tweet-input'),
+    isLiked: false,
 }
 let MAX_LETTER = 140
 let tweetList = []
@@ -123,11 +123,12 @@ function removeTweet(index){
 
 
 // // TOGGLE LIKE/UNLIKE
-// let toggleLike = (i) => {
-//     tweetList[i].isLiked = !(tweetList[i].isLiked) // tweetList[i] is object, .isLiked is key's value
-//     showList(tweetList)
-//     save();
-// }
+let toggleLike = (i) => {
+    tweetList[i].isLiked = !(tweetList[i].isLiked) // tweetList[i] is object, .isLiked is key's value
+    showList(tweetList)
+    save();
+    console.log("im here")
+}
 
 
 
