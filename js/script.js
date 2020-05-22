@@ -73,7 +73,7 @@ let showTweet =(list)=>{
     <i class="fas fa-retweet"></i>
     <i class="far fa-heart"></i>
     <i class="fas fa-upload"></i>
-    <i class="far fa-trash-alt"></i>
+    <i onclick="removeTweet()" class="far fa-trash-alt"></i>
     </div>
     `
     }
@@ -98,7 +98,7 @@ let showTweet =(list)=>{
      <i class="fas fa-retweet"></i>
      <i class="far fa-heart"></i>
      <i class="fas fa-upload"></i>
-     <i class="far fa-trash-alt"></i>
+     <i onclick="removeTweet()" class="far fa-trash-alt"></i>
     </div>
         `
      }
