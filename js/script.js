@@ -17,7 +17,10 @@ const countLetter = () => {
     document.getElementById("remain-letter").innerHTML = `${remainLetter} characters overbound`
     document.getElementById("remain-letter").style.color= "red"
     document.getElementById("tweet-button").disabled = true
- } else {
+ } else if (remainLetter === MAX_LETTER){
+    document.getElementById("remain-letter").innerHTML = ""
+ }
+ else {
  document.getElementById("remain-letter").innerHTML = `${remainLetter} characters remaining`
  document.getElementById("remain-letter").style.color= "blue"
  document.getElementById("tweet-button").disabled = false
@@ -37,6 +40,8 @@ let addTweet = () => {
     console.log("Show me your tweet list ", tweetList)
     showTweet(tweetList)
     document.getElementById("tweet-input").value = null
+    remainLetter = 100
+    document.getElementById("remain-letter").innerHTML = ""
 }
 
 let showTweet =(list)=>{
