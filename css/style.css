@@ -90,7 +90,8 @@
     color: #1da1f2;
 }
 
-.trends-show-more{
+.trends-show-more,
+.follow-more-show-more {
     border-top: 0.5px solid lightgray;
     border-color: lightgray;
     padding-top: 10px;
@@ -105,7 +106,21 @@
     text-decoration-line: none;
     transition-property: background-color, box-shadow;
     transition-duration: 0.2s;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
+
+/* .trends-section{
+    width: 300px;
+    height: auto;
+    border-color: #f5f8fa;
+    border-top-style: none;
+    border-left-style: none;
+    border-radius: 15px;
+    background-color: #f5f8fa;
+    padding-top: 12px;
+    padding-bottom: 5px;
+} */
 
 .trends-show-more a:hover,
 .follow-more-show-more a:hover{
@@ -127,6 +142,22 @@
     padding-left: 15px;
 }
 
+.row .follow-1,
+.row .follow-2{
+    border-top: 0.5px solid lightgray;
+    border-color: lightgray;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: -15px;
+}
+
+.row .follow-1:hover,
+.row .follow-2:hover {
+    background-color: #edf0f2;
+    transition-property: background-color, box-shadow;
+    transition-duration: 0.2s;
+}
+
 .follow-more{
     /* padding-left: 15px; */
     font-weight: bold;
@@ -141,7 +172,7 @@
 }
 
 .follow-user {
-    padding-left: 30px;
+    padding-left: 25px;
 }
 
 .follow-button {
@@ -158,10 +189,11 @@
     border-style: solid;
     font-weight: bold;
     margin-top: 10px;
+    float: right;
 }
 
 .follow-button:hover {
-    background-color: rgba(29,161,242,.01);
+    background-color: rgba(29,161,242,.2);
     border-bottom-color: rgb(29,161,242);
     border-left-color: rgb(29,161,242);
     border-right-color: rgb(29,161,242);
@@ -175,10 +207,10 @@
     transition-duration: 0.2s;
 }
 
-.follow-more-show-more{
+/* .follow-more-show-more{
     padding-top: 10px;
     padding-bottom: 10px;
-}
+} */
 
 .terms-privacy-policy,
 .terms-privacy-policy a {
