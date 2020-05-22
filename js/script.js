@@ -97,3 +97,11 @@ function removeTweet(index){
     tweetList.splice(index,1)
     showTweet(tweetList)
     }
+
+
+
+    
+//1. create new object with old contents
+//2. push new object into an array
+//3. render again
+
