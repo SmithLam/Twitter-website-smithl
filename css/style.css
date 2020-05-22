@@ -108,6 +108,7 @@
     transition-duration: 0.2s;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
+    height: 50px;
 }
 
 /* .trends-section{
@@ -140,15 +141,7 @@
     padding-top: 12px;
     padding-bottom: 5px;
     padding-left: 15px;
-}
-
-.row .follow-1,
-.row .follow-2{
-    border-top: 0.5px solid lightgray;
-    border-color: lightgray;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: -15px;
+    padding-right: 15px;
 }
 
 .row .follow-1:hover,
@@ -157,6 +150,7 @@
     transition-property: background-color, box-shadow;
     transition-duration: 0.2s;
 }
+
 
 .follow-more{
     /* padding-left: 15px; */
@@ -223,6 +217,17 @@
 
 .terms-privacy-policy a:hover {
     color :gray;
+}
+
+.follow-1{
+    display: flex;
+    align-items: center;
+}
+
+.follow{
+    border-top: 0.5px solid lightgray;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 /* RIGHT COLUMN - DONEEEEEEEE*/
 
