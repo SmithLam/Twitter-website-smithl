@@ -161,8 +161,6 @@
 }
 
 .follow-button:hover {
-    width: 80px;
-    height: 35px;
     background-color: rgba(29,161,242,.01);
     border-bottom-color: rgb(29,161,242);
     border-left-color: rgb(29,161,242);
@@ -379,6 +377,27 @@
 .box2 .right{
     display: flex;
     align-items: center;
+}
+
+.box2 a{
+    color: gray;
+}
+
+.box2 .reply-hover:hover,
+.box2 .share-hover:hover{
+    color: #45a9f3;
+}
+
+.box2 .retweet-hover:hover{
+    color: #5bc166;
+}
+
+.box2 .heart-hover:hover{
+    color: #e2465f;
+}
+
+.box2 .delete-hover:hover{
+    color:darkgray;
 }
 
 .hidden-middle{
