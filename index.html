@@ -76,7 +76,8 @@
                     <div class="middle-box-2">
                         <div class="box1">
                             <i class="far fa-user icon fa-2x"></i>
-                            <input type="text" placeholder="What's happening?" style="width: 100%; border: none;">
+                            <input type="text" id="tweet-input" placeholder="What's happening?" style="width: 100%; border: none; word-wrap: break-word;">
+
                         </div>
                         <div class="box2">
                             <div class="left">
@@ -87,8 +88,8 @@
                                 <i class="fas fa-calendar-day middle-box-2-icon"></i>
                             </div>
                             <div class="right">
-                                <div>Hidden Time</div>
-                                <button onclick="" id="" class="left-button-tweet" style="width: 80px; height: 35px;">Tweet</button>
+                                <div id="remain-characters" style="font-size: smaller; word-wrap: break-word;"></div>
+                                <button onclick="addTweet()" id="tweet-button" class="left-button-tweet" style="width: 80px; height: 35px;">Tweet</button>
                             </div>
                         </div>
                     </div>
@@ -96,14 +97,17 @@
                 </div>
     
                 <div class="hidden-middle">
-                    <div class="tweet-area">
-                        <div class="row box1">
+                    <div id="tweet-area">
+                       <div class="row box1">
                             <div class="col-1">
                                 <i class="far fa-user icon fa-2x"></i>
                             </div>
                             <div class="col">
-                                <p style="font-size: 12pt; margin-bottom: 0px;">GOD</p>
-                                <p style="font-size: 10pt;">@GOD57016506</p>
+                                <span>
+                                    <p style="font-size: 12pt; margin-bottom: 0px; font-weight: bold;">GOD</p>
+                                    <p style="font-size: 10pt;">@GOD57016506</p>
+                                </span>
+                                <p style="font-size: 12pt; margin-bottom: 0px; word-wrap: break-word;">Hello Tuong</p>
                             </div>
                             <div class="col-1">
                                 <i class="fas fa-chevron-down"></i>

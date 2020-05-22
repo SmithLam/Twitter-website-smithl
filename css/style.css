@@ -57,6 +57,8 @@
     opacity: 0.3;
     width:0;
     height:0;
+    transition-property: box-shadow;
+    transition-duration: 0.2s;
 }
 
 
@@ -74,6 +76,8 @@
 .trending-2:hover,
 .trending-3:hover{
     background-color:#edf0f2;
+    transition-property: background-color, box-shadow;
+    transition-duration: 0.2s;
 }
 
 .trending-location,
@@ -99,6 +103,8 @@
 .follow-more-show-more:hover{
     background-color:#edf0f2;
     text-decoration-line: none;
+    transition-property: background-color, box-shadow;
+    transition-duration: 0.2s;
 }
 
 .trends-show-more a:hover,
@@ -152,6 +158,23 @@
     border-style: solid;
     font-weight: bold;
     margin-top: 10px;
+}
+
+.follow-button:hover {
+    width: 80px;
+    height: 35px;
+    background-color: rgba(29,161,242,.01);
+    border-bottom-color: rgb(29,161,242);
+    border-left-color: rgb(29,161,242);
+    border-right-color: rgb(29,161,242);
+    border-top-color: rgb(29,161,242);
+    border-width: 1px;
+    border-radius: 40px;
+    border-style: solid;
+    font-weight: bold;
+    margin-top: 10px;
+    transition-property: background-color, box-shadow;
+    transition-duration: 0.2s;
 }
 
 .follow-more-show-more{
