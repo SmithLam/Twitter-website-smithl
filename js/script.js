@@ -4,7 +4,7 @@ isLike: false,
 }
 let MAX_LETTER = 140
 let tweetList = []
-
+let id = 0
 
 //counting the letter
 const countLetter = () => {
@@ -34,14 +34,16 @@ let addTweet = () => {
     let tweetInput = {
         contents: document.getElementById('tweet-input').value,
         isLike: false,
+        id: id
         }
     tweetList.push(tweetInput)
+    id++
     console.log("Show me your tweet ", tweetInput.contents)
     console.log("Show me your tweet list ", tweetList)
     showTweet(tweetList)
     document.getElementById("tweet-input").value = null
     remainLetter = 100
-    document.getElementById("remain-letter").innerHTML = ""
+    document.getElementById("remain-characters").innerHTML = ""
 }
 
 let showTweet =(list)=>{
@@ -73,7 +75,7 @@ let showTweet =(list)=>{
     <i class="fas fa-retweet"></i>
     <i class="far fa-heart"></i>
     <i class="fas fa-upload"></i>
-    <i onclick="removeTweet()" class="far fa-trash-alt"></i>
+    <i onclick="removeTweet(${item.id})" class="far fa-trash-alt"></i>
     </div>
     `
     }
@@ -98,7 +100,7 @@ let showTweet =(list)=>{
      <i class="fas fa-retweet"></i>
      <i class="far fa-heart"></i>
      <i class="fas fa-upload"></i>
-     <i onclick="removeTweet()" class="far fa-trash-alt"></i>
+     <i onclick="removeTweet(${item.id})" class="far fa-trash-alt"></i>
     </div>
         `
      }
@@ -109,15 +111,19 @@ let showTweet =(list)=>{
 }
 
 
-function removeTweet(index){
-    tweetList.splice(index,1)
+function removeTweet(deleteID){
+    tweetList = tweetList.filter(tweetInput => tweetInput.id != deleteID)
     showTweet(tweetList)
     }
 
 
+// function retweet(id){
+//     const originalTweet = tweetList.find((item) => item.id == id);
+//     const retweetTweet = {
+//         id: id,
+//         originContents: originalTweet.contents,
 
-    
-//1. create new object with old contents
-//2. push new object into an array
-//3. render again
 
+//     }
+
+// }
