@@ -391,6 +391,43 @@
     padding-top: 10px;
     padding-bottom: 10px;
 }
+
+.hidden-middle-retweet{
+    margin-left: 100px;
+    padding: 20px;
+    border: 1px solid rgb(225,232,237);
+    background-color: rgb(245,248,250) ;
+}
+
+.top-hidden-middle-retweet{
+    display: flex;
+}
+
+.box-retweet .title {
+    display: flex;
+}
+
+.box-retweet-contents{
+    border: 1px solid rgb(225,232,237);
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-left: 15px;
+    background-color: white;
+}
+
+.retweet-time{
+    display: flex;
+}
+
+.title-top{
+    margin-left: 20px;
+    padding-bottom: 20px;
+}
+
+.time{
+    margin-right: 20px;
+    font-size: 10pt;
+}
 /* MIDDLE COLUMN - DONEEEEEEEE */
 
 
