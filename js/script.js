@@ -1,4 +1,6 @@
+let num = 0
 let tweetInput = {
+    id: num,
     contents: document.getElementById('tweet-input'),
     isLiked: false,
 }
@@ -20,11 +22,11 @@ const countLetter = () => {
  } else if (remainLetter === MAX_LETTER){
     document.getElementById("remain-letter").innerHTML = ""
  }
- else {
- document.getElementById("remain-characters").innerHTML = `${remainLetter} letters left`
- document.getElementById("remain-characters").style.color= "black"
- document.getElementById("tweet-button").disabled = false
-}
+    else {
+    document.getElementById("remain-characters").innerHTML = `${remainLetter} letters left`
+    document.getElementById("remain-characters").style.color= "black"
+    document.getElementById("tweet-button").disabled = false
+    }
 }
 
 tweetInput.contents.addEventListener("input", countLetter)
@@ -32,8 +34,10 @@ tweetInput.contents.addEventListener("input", countLetter)
 
 let addTweet = () => {
     let tweetInput = {
+        id: num,
         contents: document.getElementById('tweet-input').value,
-        isLike: false,
+        isLiked: false,
+        parent: null,
         }
     tweetList.push(tweetInput)
     console.log("Show me your tweet ", tweetInput.contents)
@@ -51,55 +55,55 @@ let showTweet =(list)=>{
             alert ("You must enter something!")
             return null 
         }
-    if (item.isLike){
+    if (item.isLiked){
     return `          
-    <div class="row box1">
-    <div class="col-1">
-        <i class="far fa-user icon fa-2x"></i>
-    </div>
-    <div class="col">
-        <span>
-            <p style="font-size: 12pt; margin-bottom: 0px; font-weight: bold;">GOD</p>
-            <p style="font-size: 10pt;">@GOD57016506</p>
-        </span>
-        <p style="font-size: 12pt; margin-bottom: 0px; word-wrap: break-word;">${item.contents}</p>
-    </div>
-    <div class="col-1">
-        <i class="fas fa-chevron-down"></i>
-    </div>
-    </div>
-    <div class="box2">
-    <i class="far fa-comment-alt"></i>
-    <i class="fas fa-retweet"></i>
-    <i class="far fa-heart"></i>
-    <i class="fas fa-upload"></i>
-    <i onclick="removeTweet()" class="far fa-trash-alt"></i>
-    </div>
-    `
+       <div class="row box1">
+            <div class="col-1">
+                <i class="far fa-user icon fa-2x"></i>
+            </div>
+            <div class="col">
+                <span>
+                    <p style="font-size: 12pt; margin-bottom: 0px; font-weight: bold;">USERNAME</p>
+                    <p style="font-size: 10pt;">@USERNAME</p>
+                </span>
+                <p style="font-size: 12pt; margin-bottom: 0px; word-wrap: break-word;">${item.content}</p>
+            </div>
+            <div class="col-1">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+        <div class="box2">
+            <a href="#" onclick="replyTweet()" class="reply-hover"><i class="far fa-comment-alt"></i>
+            <a href="#" onclick="retweet()" class="retweet-hover"><i class="fas fa-retweet"></i></a>
+            <a href="#" onclick="toggleLike(${item.id})" class="heart-hover" id="heart-click"><i class="fas fa-heart" style="color: red"></i></a>
+            <a href="#" onclick="share()" class="share-hover"><i class="fas fa-upload"></i></a>
+            <a href="#" onclick="removeTweet()" class="delete-hover"><i class="far fa-trash-alt"></i></a>
+        </div>
+        `
     }
      else {return `
-     <div class="row box1">
-     <div class="col-1">
-         <i class="far fa-user icon fa-2x"></i>
-     </div>
-     <div class="col">
-         <span>
-             <p style="font-size: 12pt; margin-bottom: 0px; font-weight: bold;">GOD</p>
-             <p style="font-size: 10pt;">@GOD57016506</p>
-         </span>
-         <p style="font-size: 12pt; margin-bottom: 0px; word-wrap: break-word;">${item.contents}</p>
-     </div>
-     <div class="col-1">
-         <i class="fas fa-chevron-down"></i>
-     </div>
-    </div>
-    <div class="box2">
-     <i class="far fa-comment-alt"></i>
-     <i class="fas fa-retweet"></i>
-     <i class="far fa-heart"></i>
-     <i class="fas fa-upload"></i>
-     <i onclick="removeTweet()" class="far fa-trash-alt"></i>
-    </div>
+        <div class="row box1">
+             <div class="col-1">
+                 <i class="far fa-user icon fa-2x"></i>
+             </div>
+             <div class="col">
+                 <span>
+                     <p style="font-size: 12pt; margin-bottom: 0px; font-weight: bold;">USERNAME</p>
+                     <p style="font-size: 10pt;">@USERNAME</p>
+                 </span>
+                 <p style="font-size: 12pt; margin-bottom: 0px; word-wrap: break-word;">${item.content}</p>
+             </div>
+             <div class="col-1">
+                 <i class="fas fa-chevron-down"></i>
+             </div>
+         </div>
+         <div class="box2">
+             <a href="#" onclick="replyTweet()" class="reply-hover"><i class="far fa-comment-alt"></i>
+             <a href="#" onclick="retweet()" class="retweet-hover"><i class="fas fa-retweet"></i></a>
+             <a href="#" onclick="toggleLike(${item.id})" class="heart-hover" id="heart-click"><i class="far fa-heart"></i></a>
+             <a href="#" onclick="share()" class="share-hover"><i class="fas fa-upload"></i></a>
+             <a href="#" onclick="removeTweet()" class="delete-hover"><i class="far fa-trash-alt"></i></a>
+         </div>
         `
      }
     }
@@ -123,14 +127,23 @@ function removeTweet(index){
 
 
 // // TOGGLE LIKE/UNLIKE
-let toggleLike = (i) => {
-    tweetList[i].isLiked = !(tweetList[i].isLiked) // tweetList[i] is object, .isLiked is key's value
-    showList(tweetList)
-    save();
-    console.log("im here")
+let toggleLike = (id) => {
+    let originalTweet = tweetList.find(item => item.id == id) 
+    originalTweet.isLiked = !(originalTweet.isLiked) // tweetList[i] is object, .isLiked is key's value
+    showTweet(tweetList)
+    // save();
 }
 
 
+// SEARCH BY HASHTAG
+let searchByHashtag = () => {
+    //1. read the value from input
+    document.getElementById("tweet-input").value
+    //2. assign that value into keyword variable
+    // need to change URL in loadNews to be dynamic ${}
+
+    //3. call API again - the function is loadNews()
+}
 
 
 
