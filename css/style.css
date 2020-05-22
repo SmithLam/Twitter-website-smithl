@@ -1,3 +1,144 @@
+
+/* RIGHT-COLUMN-STYLING */
+
+.search-box {
+    width: 250px;
+    border-color: #e6ecf1;
+    border-top-style: none;
+    border-left-style: none;
+    border-radius: 25px;
+    background-color: #e6ecf1;
+    padding-left: 10px;
+}
+  
+.search-with-mag {
+    width: 300px;
+    border-width: 1px;
+    border-color: #e6ecf1;
+    border-top-style: none;
+    border-left-style: none;
+    border-radius: 25px;
+    background-color: #e6ecf1;
+    padding-top: 12px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    height: 50px;
+}
+
+.trends-section{
+    width: 300px;
+    height: auto;
+    border-color: #f5f8fa;
+    border-top-style: none;
+    border-left-style: none;
+    border-radius: 15px;
+    background-color: #f5f8fa;
+    padding-top: 12px;
+    padding-bottom: 5px;
+    /* padding-left: 15px; */
+}
+
+.trends-for-you {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 15px;
+    padding-right: 10px;
+}
+
+.cog:hover{
+    color: #1da1f2;
+    border-radius:12px;
+    border:12px solid #1da1f2;
+    opacity: 0.3;
+    width:0;
+    height:0;
+}
+
+
+.trending-1,
+.trending-2,
+.trending-3{
+    border-top: 0.5px solid lightgray;
+    border-color: lightgray;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: -15px;
+}
+
+.trending-1:hover,
+.trending-2:hover,
+.trending-3:hover{
+    background-color:#edf0f2;
+}
+
+.trending-location,
+.trending-hashtag,
+.trending-num-tweets {
+    padding-left: 15px;
+}
+
+.show-more-text{
+    color: #1da1f2;
+}
+
+.trends-show-more{
+    border-top: 0.5px solid lightgray;
+    border-color: lightgray;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-decoration: none;
+    padding-left: 15px;
+}
+
+.trends-show-more:hover,
+.follow-more-show-more:hover{
+    background-color:#edf0f2;
+    text-decoration-line: none;
+}
+
+.trends-show-more a:hover,
+.follow-more-show-more a:hover{
+    text-decoration-line: none;
+    text-decoration: none;
+    color: #1da1f2;
+}
+
+.follow-more-section{
+    width: 300px;
+    height: auto;
+    border-color: #f5f8fa;
+    border-top-style: none;
+    border-left-style: none;
+    border-radius: 15px;
+    background-color: #f5f8fa;
+    padding-top: 12px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+   }
+
+.follow-more-show-more{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.terms-privacy-policy,
+.terms-privacy-policy a {
+    display: space-around;
+    color: gray;
+    font-size: 12px;
+    padding-right: 5px;
+    padding-top: 15px;
+}
+
+.terms-privacy-policy a:hover {
+    color :gray;
+}
+
+/* RIGHT COLUMN */
+
+/* RIGHT COLUMN - DONEEEEEEEE*/
+
+=======
 /* LEFT COLUMN CSS */
 .icon{
     margin-top: 5px;
@@ -198,6 +339,5 @@
 
 
 
-/* RIGHT COLUMN */
 
-/* RIGHT COLUMN - DONEEEEEEEE*/
+
