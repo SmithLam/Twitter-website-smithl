@@ -2,7 +2,7 @@ let tweetInput = {
 contents: document.getElementById('tweet-input'),
 isLike: false,
 }
-let MAX_LETTER = 100
+let MAX_LETTER = 140
 let tweetList = []
 
 
@@ -14,15 +14,15 @@ const countLetter = () => {
  let remainLetter = MAX_LETTER - lengthOfSencence
  //3. show the remain number of char
  if (remainLetter<0){
-    document.getElementById("remain-letter").innerHTML = `${remainLetter} characters overbound`
-    document.getElementById("remain-letter").style.color= "red"
+    document.getElementById("remain-characters").innerHTML = `${remainLetter} letters over`
+    document.getElementById("remain-characters").style.color= "red"
     document.getElementById("tweet-button").disabled = true
  } else if (remainLetter === MAX_LETTER){
     document.getElementById("remain-letter").innerHTML = ""
  }
  else {
- document.getElementById("remain-letter").innerHTML = `${remainLetter} characters remaining`
- document.getElementById("remain-letter").style.color= "blue"
+ document.getElementById("remain-characters").innerHTML = `${remainLetter} letters left`
+ document.getElementById("remain-characters").style.color= "black"
  document.getElementById("tweet-button").disabled = false
 }
 }
@@ -53,36 +53,52 @@ let showTweet =(list)=>{
         }
     if (item.isLike){
     return `          
-      <div class="top-hidden-middle">
-      <i class="far fa-user icon" style="padding-top: 10px;"></i>
-      <div>
-          <p>trananhhuymail</p>
-          <p>${item.contents}</p>
-      </div>
-  </div>
-  <div>
-      <i class="far fa-comment-alt"></i>
-      <i class="fas fa-retweet"></i>
-      <i class="far fa-heart"></i>
-      <i class="fas fa-upload"></i>
-      <button onclick ="removeTweet(${index})"><i class="far fa-trash-alt"></i></button>
-  </div>
-  `
+    <div class="row box1">
+    <div class="col-1">
+        <i class="far fa-user icon fa-2x"></i>
+    </div>
+    <div class="col">
+        <span>
+            <p style="font-size: 12pt; margin-bottom: 0px; font-weight: bold;">GOD</p>
+            <p style="font-size: 10pt;">@GOD57016506</p>
+        </span>
+        <p style="font-size: 12pt; margin-bottom: 0px; word-wrap: break-word;">${item.contents}</p>
+    </div>
+    <div class="col-1">
+        <i class="fas fa-chevron-down"></i>
+    </div>
+    </div>
+    <div class="box2">
+    <i class="far fa-comment-alt"></i>
+    <i class="fas fa-retweet"></i>
+    <i class="far fa-heart"></i>
+    <i class="fas fa-upload"></i>
+    <i class="far fa-trash-alt"></i>
+    </div>
+    `
     }
      else {return `
-        <div class="top-hidden-middle">
-        <i class="far fa-user icon" style="padding-top: 10px;"></i>
-        <div>
-        <p>trananhhuymail</p>
-        <p>${item.contents}</p>
-        </div>
+     <div class="row box1">
+     <div class="col-1">
+         <i class="far fa-user icon fa-2x"></i>
+     </div>
+     <div class="col">
+         <span>
+             <p style="font-size: 12pt; margin-bottom: 0px; font-weight: bold;">GOD</p>
+             <p style="font-size: 10pt;">@GOD57016506</p>
+         </span>
+         <p style="font-size: 12pt; margin-bottom: 0px; word-wrap: break-word;">${item.contents}</p>
+     </div>
+     <div class="col-1">
+         <i class="fas fa-chevron-down"></i>
+     </div>
     </div>
-    <div>
-        <i class="far fa-comment-alt"></i>
-        <i class="fas fa-retweet"></i>
-        <i class="far fa-heart"></i>
-        <i class="fas fa-upload"></i>
-        <button onclick ="removeTweet(${index})"><i class="far fa-trash-alt"></i></button>
+    <div class="box2">
+     <i class="far fa-comment-alt"></i>
+     <i class="fas fa-retweet"></i>
+     <i class="far fa-heart"></i>
+     <i class="fas fa-upload"></i>
+     <i class="far fa-trash-alt"></i>
     </div>
         `
      }
