@@ -121,3 +121,17 @@ function removeTweet(index){
 //2. push new object into an array
 //3. render again
 
+
+// // TOGGLE LIKE/UNLIKE
+// let toggleLike = (i) => {
+//     tweetList[i].isLiked = !(tweetList[i].isLiked) // tweetList[i] is object, .isLiked is key's value
+//     showList(tweetList)
+//     save();
+// }
+
+
+
+
+
+
+
