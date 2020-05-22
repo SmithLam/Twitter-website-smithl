@@ -124,6 +124,3 @@ function removeTweet(deleteID){
 //         originContents: originalTweet.contents,
 
 
-//     }
-
-// }
