@@ -49,7 +49,7 @@
                         <p>More</p>
                     </div>
                     <div>
-                        <button onclick="" id="" class="left-button-tweet">Tweet</button>
+                        <button class="left-button-tweet">Tweet</button>
                     </div>
                     <div class="left left-user-profile">
                         <button>Your profile</button>
@@ -65,7 +65,7 @@
                     </div>
                     <div class="mid-middle" style="">
                         <i class="far fa-user icon"></i>
-                        <input type="text" placeholder="What's happening?">
+                        <textarea type="text" id="tweet-input" line=1 placeholder="What's happening?"></textarea>
                     </div>
                     <div class="bottom-middle" style="border: 1px solid black;">
                         <div class="icon-left">
@@ -76,15 +76,15 @@
                             <i class="fas fa-calendar-day"></i>
                         </div>
                         <div class="icon-right" style="display: flex;">
-                            <div>Hidden Time</div>
-                            <button onclick="" id="" class="left-button-tweet" style="width: 70px; height: 40px;">Tweet</button>
+                            <div id="remain-letter">Hidden Time</div>
+                            <button onclick="addTweet()" id="tweet-button" class="left-button-tweet" style="width: 70px; height: 40px;">Tweet</button>
                         </div>
                         
                     </div>
                 </div>
     
                 <div class="hidden-middle" style="border: 1px solid black;">
-                    <div class="tweet-area">
+                    <div id="tweet-area">
                         <div class="top-hidden-middle">
                             <i class="far fa-user icon" style="padding-top: 10px;"></i>
                             <div>
