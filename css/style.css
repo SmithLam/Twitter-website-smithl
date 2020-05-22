@@ -1,4 +1,8 @@
 /* RIGHT COLUMN */
+.search-section {
+    margin-top: 10px;
+}
+
 .search-box {
     width: 250px;
     border-color: #e6ecf1;
@@ -41,6 +45,9 @@
     justify-content: space-between;
     padding-left: 15px;
     padding-right: 10px;
+    font-weight: bold;
+    font-size: 14pt;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
 }
 
 .cog:hover{
@@ -112,7 +119,40 @@
     padding-top: 12px;
     padding-bottom: 5px;
     padding-left: 15px;
-   }
+}
+
+.follow-more{
+    /* padding-left: 15px; */
+    font-weight: bold;
+    font-size: 14pt;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+}
+
+.follow-pic {
+    height: 50px;
+    width: 50px;
+    border-radius: 25px;
+}
+
+.follow-user {
+    padding-left: 30px;
+}
+
+.follow-button {
+    width: 80px;
+    height: 35px;
+    background-color: transparent;
+    color: rgb(29,161,242);
+    border-bottom-color: rgb(29,161,242);
+    border-left-color: rgb(29,161,242);
+    border-right-color: rgb(29,161,242);
+    border-top-color: rgb(29,161,242);
+    border-width: 1px;
+    border-radius: 40px;
+    border-style: solid;
+    font-weight: bold;
+    margin-top: 10px;
+}
 
 .follow-more-show-more{
     padding-top: 10px;
