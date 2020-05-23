@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tweet as you like!</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="icon-image/twitter-logo.png" type="image/x-icon">
+    
     <!--bootstrap-4.0-->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <!--LEFT COLUMN-->
@@ -16,18 +18,18 @@
                 <div class="left" style="position: fixed;">
                     <div class="top-left">
                         <div class="left-logo col-3">
-                            <img src="/icon-image/twitter-logo.png" style="width: 50px; height: 50px;"/>
+                            <a href=""><img src="/icon-image/twitter-logo.png" style="width: 50px; height: 50px;"/></a>
                         </div>
                         <div class="row col-9" style="padding-top: 10px;">
                             <!-- <div class="col-3">
                                 <i class="fas fa-user-astronaut fa-1x"></i>
                             </div> -->
                             <div class="col">
-                                <p style="font-size: 12pt; margin-bottom: 0px;" id="showDisplayName"></p>
-                                <p style="font-size: 10pt;" id="showUsername"></p>
+                                <p style="font-size: 12pt; margin-bottom: 0px;" id="showDisplayName">USERNAME</p>
+                                <p style="font-size: 10pt;" id="showUsername">@Username</p>
                             </div>
                             <div class="col-1">
-                                <i class="fas fa-chevron-down"></i>
+                                <a><i class="fas fa-chevron-down"></i></a>
                             </div>
                         </div>
                     </div>
@@ -83,7 +85,7 @@
                 <div class="middle">
                     <div class="middle-box-1">
                         <button class="middle-home-button">Home</button> 
-                        <i class="far fa-star fa-2x" style="display: flex; align-items: center;"></i>
+                        <i class="far fa-star fa-1x" style="display: flex; align-items: center; color: rgb(29,161,242);"></i>
                     </div>
                     <div class="middle-box-2">
                         <div class="box1">
@@ -93,11 +95,11 @@
                         </div>
                         <div class="box2">
                             <div class="left">
-                                <i class="far fa-image middle-box-2-icon"></i>
-                                <i class="far fa-plus-square middle-box-2-icon"></i>
-                                <i class="far fa-chart-bar middle-box-2-icon"></i>
-                                <i class="far fa-smile middle-box-2-icon"></i>
-                                <i class="fas fa-calendar-day middle-box-2-icon"></i>
+                                <a href=""><i class="far fa-image middle-box-2-icon"></i></a>
+                                <a href=""><i class="far fa-plus-square middle-box-2-icon"></i></a>
+                                <a href=""><i class="far fa-chart-bar middle-box-2-icon"></i></a>
+                                <a href=""><i class="far fa-smile middle-box-2-icon"></i></a>
+                                <a href=""><i class="fas fa-calendar-day middle-box-2-icon"></i></a>
                             </div>
                             <div class="right">
                                 <div id="remain-characters" style="font-size: smaller; word-wrap: break-word; padding-top: 7px; padding-right: 10px;"></div>
@@ -126,7 +128,7 @@
                             </div>
                         </div>
                         <div class="box2">
-                            <a href="#" onclick="replyTweet()" class="reply-hover"><i class="far fa-comment-alt"></i>
+                            <a href="#" onclick="replyTweet()" class="reply-hover"><i class="far fa-comment-alt"></i></a>
                             <a href="#" onclick="retweet()" class="retweet-hover"><i class="fas fa-retweet"></i></a>
                             <a href="#" onclick="toggleLike()" class="heart-hover" id="heart-click"><i class="far fa-heart"></i></a>
                             <a href="#" onclick="share()" class="share-hover"><i class="fas fa-upload"></i></a>

@@ -366,6 +366,7 @@
 
 }
 
+
 /* SIGN IN SECTION  */
 .row .left-signin-section{
     width: 250px;
@@ -447,6 +448,8 @@
     display: flex;
     justify-content: space-between;
     border: 1px solid rgb(225,232,237);
+    padding-left: 6px;
+    padding-right: 6px;
 }
 
 .middle-home-button{
@@ -471,14 +474,18 @@
 }
 
 .middle-box-2-icon{
-    margin-left: 25px;
+    margin-left: 10px;
+    margin-top: 15px;
+    color: rgb(29,161,242);
 }
 
 .box2{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    padding-bottom: 10px;
+    margin-left: 35px;
+    margin-right: 35px;
+    /* padding-bottom: 10px; */
 }
 
 .box2 .right{
@@ -514,8 +521,9 @@
 }
 
 .hidden-middle .box1{
-    padding-top: 10px;
-    padding-bottom: 10px;
+    /* padding-top: 10px;
+    padding-bottom: 10px; */
+    padding: 10px;
 }
 
 .hidden-middle-retweet{
@@ -553,10 +561,11 @@
     margin-right: 20px;
     font-size: 10pt;
 }
+
+.hidden-middle .box2{
+    margin-bottom: 10px;
+}
 /* MIDDLE COLUMN - DONEEEEEEEE */
-
-
-
 
 
 
