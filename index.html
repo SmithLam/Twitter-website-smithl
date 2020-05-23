@@ -12,11 +12,27 @@
 <!--LEFT COLUMN-->
     <div class="container">
         <div class="row">
-            <div class="col-md-3">
-                <div class="left">
-                    <div class=" left-logo">
-                        <img src="/icon-image/twitter-logo.png" style="width: 50px; height: 50px;"/>
+            <div class="col-md-3 d-sm-none d-md-block">
+                <div class="left" style="position: fixed;">
+                    <div class="top-left">
+                        <div class="left-logo col-3">
+                            <img src="/icon-image/twitter-logo.png" style="width: 50px; height: 50px;"/>
+                        </div>
+                        <div class="row col-9" style="padding-top: 10px;">
+                            <!-- <div class="col-3">
+                                <i class="fas fa-user-astronaut fa-1x"></i>
+                            </div> -->
+                            <div class="col">
+                                <p style="font-size: 12pt; margin-bottom: 0px;" id="showDisplayName"></p>
+                                <p style="font-size: 10pt;" id="showUsername"></p>
+                            </div>
+                            <div class="col-1">
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                        </div>
                     </div>
+                    
+                    
                     <div class=" left-home">
                         <i class="fas fa-home icon"></i>
                         <p>Home</p>
@@ -54,23 +70,12 @@
                     </div>
                     <div class="row left-signin-section">
                         <div class="col left-signin-area">
-                            <input placeholder="Type in your display name here" class="type-display-name" id="typeDisplayName">
+                            <input placeholder="Type in your display name here" class="type-display-name" id="typeDisplayName" >
                             <input placeholder="Type in your username here" class="type-username" id="typeUsername">
                             <button class="signin-button" id="signInButton" onclick="signIn()">Sign In</button>
                         </div>
                     </div>
-                    <div class="row left-bottom">
-                        <div class="col-2">
-                            <i class="fas fa-user-astronaut fa-2x"></i>
-                        </div>
-                        <div class="col">
-                            <p style="font-size: 12pt; margin-bottom: 0px;" id="showDisplayName"></p>
-                            <p style="font-size: 10pt;" id="showUsername"></p>
-                        </div>
-                        <div class="col">
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
 
@@ -111,8 +116,8 @@
                             </div>
                             <div class="col">
                                 <span>
-                                    <p style="font-size: 12pt; margin-bottom: 0px; font-weight: bold;">GOD</p>
-                                    <p style="font-size: 10pt;">@GOD57016506</p>
+                                    <p style="font-size: 12pt; margin-bottom: 0px; font-weight: bold;">USER NAME</p>
+                                    <p style="font-size: 10pt;">@Username</p>
                                 </span>
                                 <p style="font-size: 12pt; margin-bottom: 0px; word-wrap: break-word;">Hello Tuong</p>
                             </div>
@@ -137,8 +142,8 @@
                             </div>
                             <div class="">
                                 <span>
-                                    <p style="font-size: 12pt; margin-bottom: 0px; font-weight: bold;">GOD</p>
-                                    <p style="font-size: 10pt;">@GOD57016506</p>
+                                    <p style="font-size: 12pt; margin-bottom: 0px; font-weight: bold;">USER NAME</p>
+                                    <p style="font-size: 10pt;">@Username</p>
                                 </span>
                             </div>
                         </div>
@@ -147,17 +152,17 @@
                             <div class="box-retweet-contents">
                                 <div class="title">
                                     <i class="far fa-user icon fa-1x" style="margin-right: 0px; font-weight: bold;"></i>
-                                    <div class="title-top" style="margin-left: 5px; font-weight: bold; font-size: 13pt">GOD</div>
-                                    <div class="title-top">@GOD57016506</div>
-                                    <div class="title-top">6m</div>
+                                    <div class="title-top" style="margin-left: 5px; font-weight: bold; font-size: 13pt">USER NAME</div>
+                                    <div class="title-top">@Username</div>
+                                    <!-- <div class="title-top">6m</div> -->
                                 </div>
                                 <div class="retweet-contents">
                                     <p>The American Pit Bull Terrier</p>
                                 </div>
                             </div>
                             <div class="retweet-time">
-                                <div class="time">1:31 PM</div>
-                                <div class="time">May 22, 2020</div>
+                                <!-- <div class="time">1:31 PM</div>
+                                <div class="time">May 22, 2020</div> -->
                                 <a href="#" class="time">Twitter Web App</a>
                             </div>
                         </div>
@@ -165,10 +170,10 @@
             </div>
             <!--RIGHT COLUMN-->
             <!--RIGHT COLUMN: SEARCH SECTION-->
-            <div class="col-md-3">
+            <div class="col-md-3 d-sm-none d-md-block">
                 <section class="search-section">
                     <div class="search-with-mag">
-                        <span><i class="fa fa-search"></i> <input value="text" placeholder="Search Twitter" width="250px" height="18px" class="search-box" /></span>
+                        <span><i class="fa fa-search"></i> <input value="" placeholder="Search Twitter" width="250px" height="18px" class="search-box" /></span>
                     </div>
                 </section>
                 <br>
@@ -177,7 +182,7 @@
                 <section class="trends-section">
                     <div class="trends-for-you">
                         <p>Trends for you</p>
-                        <span class="cog"><i class="fa fa-cog"></i></span>
+                        <span><i class="fa fa-cog setting-icon"></i></span>
                     </div>
                     <div class="trending-1">
                         <div class="trending-location">Trending in Vietnam</div>

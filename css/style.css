@@ -36,7 +36,7 @@
     border-radius: 15px;
     background-color: #f5f8fa;
     padding-top: 12px;
-    padding-bottom: 5px;
+    /* padding-bottom: 5px; */
     /* padding-left: 15px; */
 }
 
@@ -50,15 +50,8 @@
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
 }
 
-.cog:hover{
+.setting-icon:hover{
     color: #1da1f2;
-    border-radius:12px;
-    border:12px solid #1da1f2;
-    opacity: 0.3;
-    width:0;
-    height:0;
-    transition-property: box-shadow;
-    transition-duration: 0.2s;
 }
 
 
@@ -97,7 +90,7 @@
     padding-top: 10px;
     padding-bottom: 10px;
     text-decoration: none;
-    padding-left: 15px;
+    padding-left: 25px;
 }
 
 .trends-show-more:hover,
@@ -108,7 +101,6 @@
     transition-duration: 0.2s;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
-    height: 50px;
 }
 
 /* .trends-section{
@@ -139,9 +131,9 @@
     border-radius: 15px;
     background-color: #f5f8fa;
     padding-top: 12px;
-    padding-bottom: 5px;
+    /* padding-bottom: 5px;
     padding-left: 15px;
-    padding-right: 15px;
+    padding-right: 15px; */
 }
 
 .row .follow-1:hover,
@@ -153,7 +145,7 @@
 
 
 .follow-more{
-    /* padding-left: 15px; */
+    padding-left: 15px;
     font-weight: bold;
     font-size: 14pt;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
@@ -201,10 +193,10 @@
     transition-duration: 0.2s;
 }
 
-/* .follow-more-show-more{
+.follow-more-show-more{
     padding-top: 10px;
     padding-bottom: 10px;
-} */
+}
 
 .terms-privacy-policy,
 .terms-privacy-policy a {
@@ -219,15 +211,18 @@
     color :gray;
 }
 
-.follow-1{
+.follow-1, .follow-2{
     display: flex;
     align-items: center;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .follow{
     border-top: 0.5px solid lightgray;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    /* padding-top: 10px;
+    padding-bottom: 10px; */
 }
 /* RIGHT COLUMN - DONEEEEEEEE*/
 
@@ -243,7 +238,7 @@
     font-weight: bold;
     font-size: 14pt;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
-
+    
 }
 
 .left-logo{
@@ -365,6 +360,11 @@
     font-weight: bold;
     margin-top: 10px;
 }
+.top-left{
+    display: flex; 
+    align-items: center;
+
+}
 
 /* SIGN IN SECTION  */
 .row .left-signin-section{
@@ -373,9 +373,10 @@
     border-top-style: none;
     border-left-style: none;
     border-radius: 25px;
-    background-color: #e6ecf1;
+    background-color: #f5f8fa;
     margin-top: 20px;
     padding-bottom: 10px;
+    ;
 }
   
 .type-display-name,
