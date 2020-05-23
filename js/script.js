@@ -145,7 +145,16 @@ let searchByHashtag = () => {
     //3. call API again - the function is loadNews()
 }
 
+// SIGN IN TO SHOW DISPLAY NAME/USERNAME AT BOTTOM LEFT
+let signIn = () => {
+    // 1. get value from user input
+    let displayDisplayName = document.getElementById("typeDisplayName").value
+    let displayUsername = document.getElementById("typeUsername").value
+    // 2. display below
+    document.getElementById("showDisplayName").innerHTML = `${displayDisplayName}`
+    document.getElementById("showUsername").innerHTML = `@${displayUsername}`
+}
 
-
+// need to only allow text (no space or special characters) for username
 
 
