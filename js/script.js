@@ -53,7 +53,7 @@ const countLetter = () => {
  document.getElementById("tweet-button").disabled = false
 }
 }
-
+//ADD EVENTLISTER TO CHECK INPUT
 tweetInput.contents.addEventListener("input", countLetter)
 //END FUNCTION TO COUNT LETTER
 
@@ -80,6 +80,14 @@ let addTweet = () => {
     document.getElementById("remain-characters").innerHTML = ""
 }
 //END FUNCTION TO ADD TWEET
+
+//ADD EVENT LISTENER TO PRESS "ENTER" TO TWEET
+tweetInput.contents.addEventListener("keypress", function onEvent(event) {
+    if (event.key === "Enter") {
+        document.getElementById("tweet-button").click();
+    }
+});
+//ENTER ADD EVENT LISTENER TO PRESS "ENTER" TO TWEET
 
 //FUNCTION TO SHOWTWEET (RENDER FUNCTION)
 let showTweet =(list)=>{
