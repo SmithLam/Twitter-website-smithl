@@ -102,7 +102,9 @@ let showTweet =(list)=>{
     console.log ("What are words here", words)
     // For loop
     for (let i = 0; i< words.length; i++ ){
-        console.log ("What are second to last letter", words[i].slice(-4))
+        //use slice to check the word needed for https://www.youtube.com/watch?v= (32 letters) && 
+        console.log ("What are second to last letter", words[i].slice(0, 32))
+
         //  if else statement to check for "#" or "@""
         if (words[i][0] == "#" || words[i][0] == "@" ){
             contents += `<a href="#" onclick = 'checkHashtag("${words[i]}")'> ` + words[i] +    `</a>`
@@ -113,6 +115,14 @@ let showTweet =(list)=>{
             contents += `<img src="${words[i]}" style="height:300px">`
             console.log("What are image here ", contents)
         }
+        //if else statement to check if the input is a Youtube video, then put the words[i].slice(32) (the code the "https://www.youtube.com/watch?v=" into www.youtube.com/embed/)
+        else if (words[i].slice(0, 32) == "https://www.youtube.com/watch?v="){
+            contents += `
+            <iframe frameborder="0" allowfullscreen width="420" height="345" src="https://www.youtube.com/embed/${words[i].slice(32)}">
+            </iframe>
+                        `
+        }
+        //if nothing else fits then just normal word
         else {
             contents += ` ` + words[i];
             console.log ("What are unhastag words here", contents)
