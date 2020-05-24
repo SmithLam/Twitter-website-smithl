@@ -1,4 +1,8 @@
 /* RIGHT COLUMN */
+.search-section {
+    margin-top: 10px;
+}
+
 .search-box {
     width: 250px;
     border-color: #e6ecf1;
@@ -32,7 +36,7 @@
     border-radius: 15px;
     background-color: #f5f8fa;
     padding-top: 12px;
-    padding-bottom: 5px;
+    /* padding-bottom: 5px; */
     /* padding-left: 15px; */
 }
 
@@ -41,15 +45,13 @@
     justify-content: space-between;
     padding-left: 15px;
     padding-right: 10px;
+    font-weight: bold;
+    font-size: 14pt;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
 }
 
-.cog:hover{
+.setting-icon:hover{
     color: #1da1f2;
-    border-radius:12px;
-    border:12px solid #1da1f2;
-    opacity: 0.3;
-    width:0;
-    height:0;
 }
 
 
@@ -67,6 +69,8 @@
 .trending-2:hover,
 .trending-3:hover{
     background-color:#edf0f2;
+    transition-property: background-color, box-shadow;
+    transition-duration: 0.2s;
 }
 
 .trending-location,
@@ -79,20 +83,37 @@
     color: #1da1f2;
 }
 
-.trends-show-more{
+.trends-show-more,
+.follow-more-show-more {
     border-top: 0.5px solid lightgray;
     border-color: lightgray;
     padding-top: 10px;
     padding-bottom: 10px;
     text-decoration: none;
-    padding-left: 15px;
+    padding-left: 25px;
 }
 
 .trends-show-more:hover,
 .follow-more-show-more:hover{
     background-color:#edf0f2;
     text-decoration-line: none;
+    transition-property: background-color, box-shadow;
+    transition-duration: 0.2s;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
+
+/* .trends-section{
+    width: 300px;
+    height: auto;
+    border-color: #f5f8fa;
+    border-top-style: none;
+    border-left-style: none;
+    border-radius: 15px;
+    background-color: #f5f8fa;
+    padding-top: 12px;
+    padding-bottom: 5px;
+} */
 
 .trends-show-more a:hover,
 .follow-more-show-more a:hover{
@@ -110,9 +131,67 @@
     border-radius: 15px;
     background-color: #f5f8fa;
     padding-top: 12px;
-    padding-bottom: 5px;
+    /* padding-bottom: 5px;
     padding-left: 15px;
-   }
+    padding-right: 15px; */
+}
+
+.row .follow-1:hover,
+.row .follow-2:hover {
+    background-color: #edf0f2;
+    transition-property: background-color, box-shadow;
+    transition-duration: 0.2s;
+}
+
+
+.follow-more{
+    padding-left: 15px;
+    font-weight: bold;
+    font-size: 14pt;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+}
+
+.follow-pic {
+    height: 50px;
+    width: 50px;
+    border-radius: 25px;
+}
+
+.follow-user {
+    padding-left: 25px;
+}
+
+.follow-button {
+    width: 80px;
+    height: 35px;
+    background-color: transparent;
+    color: rgb(29,161,242);
+    border-bottom-color: rgb(29,161,242);
+    border-left-color: rgb(29,161,242);
+    border-right-color: rgb(29,161,242);
+    border-top-color: rgb(29,161,242);
+    border-width: 1px;
+    border-radius: 40px;
+    border-style: solid;
+    font-weight: bold;
+    margin-top: 10px;
+    float: right;
+}
+
+.follow-button:hover {
+    background-color: rgba(29,161,242,.2);
+    border-bottom-color: rgb(29,161,242);
+    border-left-color: rgb(29,161,242);
+    border-right-color: rgb(29,161,242);
+    border-top-color: rgb(29,161,242);
+    border-width: 1px;
+    border-radius: 40px;
+    border-style: solid;
+    font-weight: bold;
+    margin-top: 10px;
+    transition-property: background-color, box-shadow;
+    transition-duration: 0.2s;
+}
 
 .follow-more-show-more{
     padding-top: 10px;
@@ -131,6 +210,20 @@
 .terms-privacy-policy a:hover {
     color :gray;
 }
+
+.follow-1, .follow-2{
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.follow{
+    border-top: 0.5px solid lightgray;
+    /* padding-top: 10px;
+    padding-bottom: 10px; */
+}
 /* RIGHT COLUMN - DONEEEEEEEE*/
 
 /* LEFT COLUMN CSS */
@@ -145,7 +238,7 @@
     font-weight: bold;
     font-size: 14pt;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
-
+    
 }
 
 .left-logo{
@@ -267,9 +360,85 @@
     font-weight: bold;
     margin-top: 10px;
 }
+.top-left{
+    display: flex; 
+    align-items: center;
+
+}
+
+
+/* SIGN IN SECTION  */
+.row .left-signin-section{
+    width: 250px;
+    border-color: #e6ecf1;
+    border-top-style: none;
+    border-left-style: none;
+    border-radius: 25px;
+    background-color: #f5f8fa;
+    margin-top: 20px;
+    padding-bottom: 10px;
+    ;
+}
+  
+.type-display-name,
+.type-username {
+    width: 220px;
+    border-width: 1px;
+    border-color: none;
+    border-top-style: none;
+    border-left-style: none;
+    border-bottom-style: none;
+    border-right-style: none;
+    border-radius: 25px;
+    background-color: white;
+    height: 35px;
+    font-size: 14px;
+    padding-left: 5px;
+}
+
+.type-display-name{
+    margin-top: 15px;
+}
+
+.type-username{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+
+.signin-button {
+    width: 100px;
+    height: 35px;
+    background-color: transparent;
+    color: rgb(29,161,242);
+    border-bottom-color: rgb(29,161,242);
+    border-left-color: rgb(29,161,242);
+    border-right-color: rgb(29,161,242);
+    border-top-color: rgb(29,161,242);
+    border-width: 1px;
+    border-radius: 40px;
+    border-style: solid;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.signin-button:hover {
+    background-color: rgba(29,161,242,.2);
+    border-bottom-color: rgb(29,161,242);
+    border-left-color: rgb(29,161,242);
+    border-right-color: rgb(29,161,242);
+    border-top-color: rgb(29,161,242);
+    border-width: 1px;
+    border-radius: 40px;
+    border-style: solid;
+    font-weight: bold;
+    margin-top: 10px;
+    transition-property: background-color, box-shadow;
+    transition-duration: 0.2s;
+}
 
 .left-bottom{
-    margin-top: 140px;
+    margin-top: 30px;
 }
 /* LEFT COLUMN CSS - DONEEEEEEEE */
 
@@ -279,6 +448,8 @@
     display: flex;
     justify-content: space-between;
     border: 1px solid rgb(225,232,237);
+    padding-left: 6px;
+    padding-right: 6px;
 }
 
 .middle-home-button{
@@ -303,19 +474,44 @@
 }
 
 .middle-box-2-icon{
-    margin-left: 25px;
+    margin-left: 10px;
+    margin-top: 15px;
+    color: rgb(29,161,242);
 }
 
 .box2{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    padding-bottom: 10px;
+    margin-left: 35px;
+    margin-right: 35px;
+    /* padding-bottom: 10px; */
 }
 
 .box2 .right{
     display: flex;
     align-items: center;
+}
+
+.box2 a{
+    color: gray;
+}
+
+.box2 .reply-hover:hover,
+.box2 .share-hover:hover{
+    color: #45a9f3;
+}
+
+.box2 .retweet-hover:hover{
+    color: #5bc166;
+}
+
+.box2 .heart-hover:hover{
+    color: #e2465f;
+}
+
+.box2 .delete-hover:hover{
+    color:darkgray;
 }
 
 .hidden-middle{
@@ -325,13 +521,51 @@
 }
 
 .hidden-middle .box1{
+    /* padding-top: 10px;
+    padding-bottom: 10px; */
+    padding: 10px;
+}
+
+.hidden-middle-retweet{
+    padding: 20px;
+    border: 1px solid rgb(225,232,237);
+    background-color: rgb(245,248,250) ;
+}
+
+.top-hidden-middle-retweet{
+    display: flex;
+}
+
+.box-retweet .title {
+    display: flex;
+}
+
+.box-retweet-contents{
+    border: 1px solid rgb(225,232,237);
+    border-radius: 10px;
     padding-top: 10px;
-    padding-bottom: 10px;
+    padding-left: 15px;
+    background-color: white;
+}
+
+.retweet-time{
+    display: flex;
+}
+
+.title-top{
+    margin-left: 20px;
+    padding-bottom: 20px;
+}
+
+.time{
+    margin-right: 20px;
+    font-size: 10pt;
+}
+
+.hidden-middle .box2{
+    margin-bottom: 10px;
 }
 /* MIDDLE COLUMN - DONEEEEEEEE */
-
-
-
 
 
 
