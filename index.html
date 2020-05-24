@@ -4,19 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tweet as you like!</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="icon-image/twitter-logo.png" type="image/x-icon">
+    
     <!--bootstrap-4.0-->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
+<!--LEFT COLUMN-->
     <div class="container">
         <div class="row">
-            <div class="col-3">
-                <div class="left">
-                    <div class=" left-logo">
-                        <img src="/icon-image/twitter-logo.png" style="width: 50px; height: 50px;"/>
+            <div class="col-md-3 d-sm-none d-md-block">
+                <div class="left" style="position: fixed;">
+                    <div class="top-left">
+                        <div class="left-logo col-3">
+                            <a href=""><img src="/icon-image/twitter-logo.png" style="width: 50px; height: 50px;"/></a>
+                        </div>
+                        <div class="row col-9" style="padding-top: 10px;">
+                            <!-- <div class="col-3">
+                                <i class="fas fa-user-astronaut fa-1x"></i>
+                            </div> -->
+                            <div class="col">
+                                <p style="font-size: 12pt; margin-bottom: 0px;" id="showDisplayName">USERNAME</p>
+                                <p style="font-size: 10pt;" id="showUsername">@Username</p>
+                            </div>
+                            <div class="col-1">
+                                <a><i class="fas fa-chevron-down"></i></a>
+                            </div>
+                        </div>
                     </div>
+                    
+                    
                     <div class=" left-home">
                         <i class="fas fa-home icon"></i>
                         <p>Home</p>
@@ -52,26 +70,22 @@
                     <div>
                         <button onclick="" id="" class="left-button-tweet">Tweet</button>
                     </div>
-                    <div class=" row left-bottom">
-                        <div class="col">
-                            <i class="fas fa-user-astronaut fa-2x"></i>
-                        </div>
-                        <div class="col">
-                            <p style="font-size: 12pt; margin-bottom: 0px;">GOD</p>
-                            <p style="font-size: 10pt;">@GOD57016506</p>
-                        </div>
-                        <div class="col">
-                            <i class="fas fa-chevron-down"></i>
+                    <div class="row left-signin-section">
+                        <div class="col left-signin-area">
+                            <input placeholder="Type in your display name here" class="type-display-name" id="typeDisplayName" >
+                            <input placeholder="Type in your username here" class="type-username" id="typeUsername">
+                            <button class="signin-button" id="signInButton" onclick="signIn()">Sign In</button>
                         </div>
                     </div>
+                    
                 </div>
             </div>
 
-            <div class="col-6">
+            <div class="col-md-6">
                 <div class="middle">
                     <div class="middle-box-1">
                         <button class="middle-home-button">Home</button> 
-                        <i class="far fa-star fa-2x" style="display: flex; align-items: center;"></i>
+                        <i class="far fa-star fa-1x" style="display: flex; align-items: center; color: rgb(29,161,242);"></i>
                     </div>
                     <div class="middle-box-2">
                         <div class="box1">
@@ -81,14 +95,14 @@
                         </div>
                         <div class="box2">
                             <div class="left">
-                                <i class="far fa-image middle-box-2-icon"></i>
-                                <i class="far fa-plus-square middle-box-2-icon"></i>
-                                <i class="far fa-chart-bar middle-box-2-icon"></i>
-                                <i class="far fa-smile middle-box-2-icon"></i>
-                                <i class="fas fa-calendar-day middle-box-2-icon"></i>
+                                <a href=""><i class="far fa-image middle-box-2-icon"></i></a>
+                                <a href=""><i class="far fa-plus-square middle-box-2-icon"></i></a>
+                                <a href=""><i class="far fa-chart-bar middle-box-2-icon"></i></a>
+                                <a href=""><i class="far fa-smile middle-box-2-icon"></i></a>
+                                <a href=""><i class="fas fa-calendar-day middle-box-2-icon"></i></a>
                             </div>
                             <div class="right">
-                                <div id="remain-characters" style="font-size: smaller; word-wrap: break-word;"></div>
+                                <div id="remain-characters" style="font-size: smaller; word-wrap: break-word; padding-top: 7px; padding-right: 10px;"></div>
                                 <button onclick="addTweet()" id="tweet-button" class="left-button-tweet" style="width: 80px; height: 35px;">Tweet</button>
                             </div>
                         </div>
@@ -104,53 +118,88 @@
                             </div>
                             <div class="col">
                                 <span>
-                                    <p style="font-size: 12pt; margin-bottom: 0px; font-weight: bold;">GOD</p>
-                                    <p style="font-size: 10pt;">@GOD57016506</p>
+                                    <p style="font-size: 12pt; margin-bottom: 0px; font-weight: bold;">USERNAME</p>
+                                    <p style="font-size: 10pt;">@Username</p>
                                 </span>
-                                <p style="font-size: 12pt; margin-bottom: 0px; word-wrap: break-word;">Hello Tuong</p>
+                                <p style="font-size: 12pt; margin-bottom: 0px; word-wrap: break-word;">Hello Everyone !</p>
                             </div>
                             <div class="col-1">
                                 <i class="fas fa-chevron-down"></i>
                             </div>
                         </div>
                         <div class="box2">
-                            <i class="far fa-comment-alt"></i>
-                            <i class="fas fa-retweet"></i>
-                            <i class="far fa-heart"></i>
-                            <i class="fas fa-upload"></i>
-                            <i class="far fa-trash-alt"></i>
-                        </div>
+                            <a href="#" onclick="replyTweet()" class="reply-hover"><i class="far fa-comment-alt"></i></a>
+                            <a href="#" onclick="retweet()" class="retweet-hover"><i class="fas fa-retweet"></i></a>
+                            <a href="#" onclick="toggleLike()" class="heart-hover" id="heart-click"><i class="far fa-heart"></i></a>
+                            <a href="#" onclick="share()" class="share-hover"><i class="fas fa-upload"></i></a>
+                            <a href="#" onclick="removeTweet()" class="delete-hover"><i class="far fa-trash-alt"></i></a>
+                        </div>  
                     </div>
                 </div>
-            </div>
 
-            <div class="col-3">
+                <div class="hidden-middle-retweet">
+                        <div class="top-hidden-middle-retweet">
+                            <div class="">
+                                <i class="far fa-user icon fa-2x"></i>
+                            </div>
+                            <div class="">
+                                <span>
+                                    <p style="font-size: 12pt; margin-bottom: 0px; font-weight: bold;">USERNAME</p>
+                                    <p style="font-size: 10pt;">@Username</p>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="" style="font-size: 14pt;">You reweeted this!</div>
+                        <div class="box-retweet">
+                            <div class="box-retweet-contents">
+                                <div class="title">
+                                    <i class="far fa-user icon fa-1x" style="margin-right: 0px; font-weight: bold;"></i>
+                                    <div class="title-top" style="margin-left: 5px; font-weight: bold; font-size: 13pt">USERNAME</div>
+                                    <div class="title-top">@Username</div>
+                                    <!-- <div class="title-top">6m</div> -->
+                                </div>
+                                <div class="retweet-contents">
+                                    <p>The American Pit Bull Terrier</p>
+                                </div>
+                            </div>
+                            <div class="retweet-time">
+                                <!-- <div class="time">1:31 PM</div>
+                                <div class="time">May 22, 2020</div> -->
+                                <a href="#" class="time">Twitter Web App</a>
+                            </div>
+                        </div>
+                </div>
+            </div>
+            <!--RIGHT COLUMN-->
+            <!--RIGHT COLUMN: SEARCH SECTION-->
+            <div class="col-md-3 d-sm-none d-md-block">
                 <section class="search-section">
-                    <div value="text" class="search-with-mag">
-                        <span><i class="fa fa-search"></i> <input value="text" placeholder="Search Twitter" width="250px" height="18px" class="search-box" /></span>
+                    <div class="search-with-mag">
+                        <span><i class="fa fa-search"></i> <input value="" placeholder="Search Twitter" width="250px" height="18px" class="search-box" /></span>
                     </div>
                 </section>
                 <br>
+    
                 <!--RIGHT COLUMN: TRENDS SECTION-->
                 <section class="trends-section">
                     <div class="trends-for-you">
-                        <h4><strong>Trends for you</strong></h4>
-                        <span class="cog"><i class="fa fa-cog"></i></span>
+                        <p>Trends for you</p>
+                        <span><i class="fa fa-cog setting-icon"></i></span>
                     </div>
                     <div class="trending-1">
-                        <div class="trending-location">Trending in Vietnam</div>
-                        <div class="trending-hashtag">Ha Noi</div>
+                        <div class="trending-location" style="font-size: 9pt;">Trending in Vietnam</div>
+                        <div class="trending-hashtag" style="font-weight: bold;">Việt Nam</div>
                         <div class="trending-num-tweets">4,649 Tweets</div>
                     </div>
                     <div class="trending-2">
-                        <div class="trending-location">Trending in Vietnam</div>
-                        <div class="trending-hashtag">Ha Noi</div>
-                        <div class="trending-num-tweets">4,649 Tweets</div>
+                        <div class="trending-location" style="font-size: 9pt;">kpop · Trending</div>
+                        <div class="trending-hashtag" style="font-weight: bold;">#LISA</div>
+                        <div class="trending-num-tweets">163K Tweets</div>
                     </div>
                     <div class="trending-3">
-                        <div class="trending-location">Trending in Vietnam</div>
-                        <div class="trending-hashtag">Ha Noi</div>
-                        <div class="trending-num-tweets">4,649 Tweets</div>
+                        <div class="trending-location" style="font-size: 9pt;">kpop · Trending</div>
+                        <div class="trending-hashtag" style="font-weight: bold;">#US_ARMY_FIGHTING</div>
+                        <div class="trending-num-tweets">3,060 Tweets</div>
                     </div>
                     <div class="trends-show-more">
                         <a href="#" id="trendsMore" class="trends-more-text">Show more</a>
@@ -159,8 +208,35 @@
                 <!--RIGHT COLUMN: WHO TO FOLLOW SECTION-->
                 <section class="follow-more-section">
                     <div class="follow-more">
-                        <h4><strong>Who to follow</strong></h4>
+                        <p>Who to follow</p>
                     </div>
+                    <div class="follow">
+                        <div class=" follow-1">
+                            <div class="col-2" style="padding: 0px;">
+                                <img src="https://pbs.twimg.com/profile_images/1111729635610382336/_65QFl7B_400x400.png" class="follow-pic">
+                            </div>
+                            <div class="col follow-user" style="padding-left: 10px">
+                                <p class="follow-user-namedisplay" style="margin-bottom: 0px;">Twitter</p>
+                                <p class="follow-user-username" style="margin-bottom: 0px;">@Twitter</p>
+                            </div>
+                            <div class="col" style="padding-bottom: 10px;">
+                                <button onclick class="follow-button">Follow</button>
+                            </div>
+                        </div>
+                        <div class=" follow-1">
+                            <div class="col-2" style="padding: 0px;">
+                                <img src="https://pbs.twimg.com/profile_images/822547732376207360/5g0FC8XX_400x400.jpg" class="follow-pic">
+                            </div>
+                            <div class="col follow-user" style="padding-left: 10px">
+                                <p class="follow-user-namedisplay" style="margin-bottom: 0px;">Barack Obama</p>
+                                <p class="follow-user-username" style="margin-bottom: 0px;">@BarackObama</p>
+                            </div>
+                            <div class="col-1" style="padding-bottom: 10px; padding-left: 15px">
+                                <button onclick class="follow-button">Follow</button>
+                            </div>
+                        </div>
+                    </div>
+                    
                     <div class="follow-more-show-more">
                         <a href="#" id="followMore" class="follow-more-text">Show more</a>
                     </div>
@@ -178,9 +254,6 @@
             </div>
         </div>
     </div>
-    <!--RIGHT COLUMN-->
-    <!--RIGHT COLUMN: SEARCH SECTION-->
-    
     
     <!--javascript-->
 
