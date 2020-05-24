@@ -64,13 +64,13 @@ let addTweet = () => {
         isLiked: false,
         id: id
         } 
-    if (item.contents == 0){
-            console.log("What is item id here", item.id)
-            tweetList=tweetList.filter (item => item.contents !== 0)
+    //BLOCK CONTENTS = 0    
+    if (tweetInput.contents == 0){
             alert ("You must enter something!")
             return null
         }
-    tweetList.unshift(tweetInput)
+    //BLOCK CONTENTS = 0
+    else{tweetList.unshift(tweetInput)}
     id++
     console.log("Show me your tweet ", tweetInput.contents)
     console.log("Show me your tweet list ", tweetList)
