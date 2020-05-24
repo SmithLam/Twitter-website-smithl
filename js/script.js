@@ -102,10 +102,16 @@ let showTweet =(list)=>{
     console.log ("What are words here", words)
     // For loop
     for (let i = 0; i< words.length; i++ ){
+        console.log ("What are second to last letter", words[i].slice(-4))
         //  if else statement to check for "#" or "@""
         if (words[i][0] == "#" || words[i][0] == "@" ){
             contents += `<a href="#" onclick = 'checkHashtag("${words[i]}")'> ` + words[i] +    `</a>`
             console.log ("What are hastag words here", contents)
+        }
+        //if else statement to check for image .jpg or .png or .gif
+        else if (words[i].slice(-4) == ".jpg" || words[i].slice(-4) == ".png" || words[i].slice(-4) == ".gif") {
+            contents += `<img src="${words[i]}" style="height:300px">`
+            console.log("What are image here ", contents)
         }
         else {
             contents += ` ` + words[i];
