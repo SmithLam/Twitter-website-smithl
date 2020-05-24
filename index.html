@@ -72,9 +72,9 @@
                     </div>
                     <div class="row left-signin-section">
                         <div class="col left-signin-area">
-                            <input placeholder="Type in your display name here" class="type-display-name" id="typeDisplayName" >
-                            <input placeholder="Type in your username here" class="type-username" id="typeUsername">
-                            <button class="signin-button" id="signInButton" onclick="signIn()">Sign In</button>
+                            <input placeholder="Type in your display name here" class="type-display-name" id="typeDisplayName"  style="outline: none;">
+                            <input placeholder="Type in your username here" class="type-username" id="typeUsername" style="outline: none;">
+                            <button class="signin-button" id="signInButton" onclick="signIn()" style="outline: none;">Sign In</button>
                         </div>
                     </div>
                     
@@ -84,13 +84,13 @@
             <div class="col-md-6">
                 <div class="middle">
                     <div class="middle-box-1">
-                        <button class="middle-home-button">Home</button> 
-                        <i class="far fa-star fa-1x" style="display: flex; align-items: center; color: rgb(29,161,242);"></i>
+                        <button class="middle-home-button"  style="outline: none;">Home</button> 
+                        <i class="far fa-star fa-1x" style="display: flex; align-items: center; color: rgb(29,161,242); "></i>
                     </div>
                     <div class="middle-box-2">
                         <div class="box1">
                             <i class="far fa-user icon fa-2x"></i>
-                            <input type="text" id="tweet-input" placeholder="What's happening?" style="width: 100%; border: none; word-wrap: break-word;">
+                            <input type="text" id="tweet-input" placeholder="What's happening?" style="width: 100%; border: none; word-wrap: break-word; outline: none;">
 
                         </div>
                         <div class="box2">
@@ -103,7 +103,7 @@
                             </div>
                             <div class="right">
                                 <div id="remain-characters" style="font-size: smaller; word-wrap: break-word; padding-top: 7px; padding-right: 10px;"></div>
-                                <button onclick="addTweet()" id="tweet-button" class="left-button-tweet" style="width: 80px; height: 35px;">Tweet</button>
+                                <button onclick="addTweet()" id="tweet-button" class="left-button-tweet" style="width: 80px; height: 35px; outline: none;">Tweet</button>
                             </div>
                         </div>
                     </div>
@@ -173,7 +173,7 @@
             <div class="col-md-3 d-sm-none d-md-block">
                 <section class="search-section">
                     <div class="search-with-mag">
-                        <span><i class="fa fa-search"></i> <input value="" placeholder="Search Twitter" width="250px" height="18px" class="search-box" /></span>
+                        <span><i class="fa fa-search"></i> <input value="" placeholder="Search Twitter" width="250px" height="18px" class="search-box"  style="outline: none;"/></span>
                     </div>
                 </section>
                 <br>
@@ -218,7 +218,7 @@
                                 <p class="follow-user-username" style="margin-bottom: 0px;">@Twitter</p>
                             </div>
                             <div class="col" style="padding-bottom: 10px;">
-                                <button onclick class="follow-button">Follow</button>
+                                <button onclick class="follow-button"  style="outline: none;">Follow</button>
                             </div>
                         </div>
                         <div class=" follow-1">
@@ -230,7 +230,7 @@
                                 <p class="follow-user-username" style="margin-bottom: 0px;">@BarackObama</p>
                             </div>
                             <div class="col-1" style="padding-bottom: 10px; padding-left: 15px">
-                                <button onclick class="follow-button">Follow</button>
+                                <button onclick class="follow-button" style="outline: none;">Follow</button>
                             </div>
                         </div>
                     </div>
