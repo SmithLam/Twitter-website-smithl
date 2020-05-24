@@ -76,7 +76,7 @@ let addTweet = () => {
     console.log("Show me your tweet list ", tweetList)
     showTweet(tweetList)
     document.getElementById("tweet-input").value = null
-    remainLetter = 100
+    remainLetter = 140
     document.getElementById("remain-characters").innerHTML = ""
 }
 //END FUNCTION TO ADD TWEET
