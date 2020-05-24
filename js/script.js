@@ -134,7 +134,7 @@ let showTweet =(list)=>{
                 </div>
             </div>
             <div class="retweet-time">
-                <a href="#" class="time">Twitter Web App</a>
+                <a href="index.html" class="time">Twitter Web App</a>
             </div>
         </div>
         </div>
