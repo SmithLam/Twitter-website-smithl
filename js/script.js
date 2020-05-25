@@ -112,7 +112,7 @@ let showTweet =(list)=>{
         }
         //if else statement to check for image .jpg or .png or .gif
         else if (words[i].slice(-4) == ".jpg" || words[i].slice(-4) == ".png" || words[i].slice(-4) == ".gif") {
-            contents += `<img src="${words[i]}" style="height:300px">`
+            contents += `<img src="${words[i]}" style="height:300px; max-width:500px">`
             console.log("What are image here ", contents)
         }
         //if else statement to check if the input is a Youtube video, then put the words[i].slice(32) (the code the "https://www.youtube.com/watch?v=" into www.youtube.com/embed/)
